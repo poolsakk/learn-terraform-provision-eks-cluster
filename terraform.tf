@@ -5,7 +5,7 @@ terraform {
 
   # cloud {
   #   workspaces {
-  #     name = "learn-terraform-provision-eks-cluster"
+  #     name = "learn-terraform-eks"
   #   }
   # }
 

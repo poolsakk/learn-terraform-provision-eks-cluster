@@ -96,6 +96,12 @@ module "eks" {
 
 
 # https://aws.amazon.com/blogs/containers/amazon-ebs-csi-driver-is-now-generally-available-in-amazon-eks-add-ons/ 
+# aws iam attach-user-policy --user-name owners --policy-arn arn:aws:iam::aws:policy/AmazonEKSClusterPolicy
+# aws iam attach-user-policy --user-name owners --policy-arn arn:aws:iam::aws:policy/AmazonEKSServicePolicy
+# aws iam attach-user-policy --user-name owners --policy-arn arn:aws:iam::aws:policy/AmazonEKSServiceRolePolicy
+# aws iam attach-user-policy --user-name owners --policy-arn arn:aws:iam::aws:policy/AmazonEC2FullAccess
+# aws iam attach-user-policy --user-name owners --policy-arn arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
+# aws iam attach-user-policy --user-name owners --policy-arn arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
 data "aws_iam_policy" "ebs_csi_policy" {
   arn = "arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy"
 }
